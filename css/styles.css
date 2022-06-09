@@ -362,6 +362,10 @@ template {
   src: url("../fonts/fraunces-v22-latin-900.woff2") format("woff2"), url("../fonts/fraunces-v22-latin-900.woff") format("woff");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -398,7 +402,7 @@ img {
   padding-right: 20px;
 }
 
-button {
+.hero__btn {
   background-color: #0E8784;
   border-radius: 6px;
   font-family: 'Fraunces';
@@ -413,7 +417,7 @@ button {
   padding: 16px 31px;
 }
 
-button:hover {
+.hero__btn:hover {
   background-color: #66D2CF;
   border-radius: 6px;
   font-family: 'Fraunces';
@@ -1250,51 +1254,100 @@ button:hover {
   width: 285px;
 }
 
-.drink__container {
+.plan_label {
+  display: block;
+  max-width: 228px;
+  width: 100%;
+}
+
+.plan_label:not(:last-child) {
+  margin-right: 23px;
+}
+
+.plan__inner-wrapper {
+  max-width: 1150px;
+}
+
+.plan__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.drink__left {
-  margin-right: 125px;
+.plan__left {
+  max-width: 255px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
 }
 
-.drink__list {
+.plan__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.drink__item {
-  margin-bottom: 24px;
-  opacity: 0.4;
-  margin: 0;
-  padding: 0;
-}
-
-.drink__item-link {
-  text-decoration: none;
-}
-
-.drink__item-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.drink__item-number {
+.plan__item {
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+  border-bottom: 1px solid #83888F;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+.plan__item:hover {
+  opacity: 0.6;
+}
+
+.plan__item:active {
+  opacity: 1;
+}
+
+.plan__item:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.plan__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.plan__item-num {
   margin: 0;
   font-family: 'Fraunces';
-  font-style: normal;
-  font-weight: 900;
   font-size: 24px;
   line-height: 32px;
-  color: #83888F;
-  margin-right: 25px;
+  color: #0E8784;
+  margin-right: 28.5px;
 }
 
-.drink__item-heading {
+.plan__item-heading {
   margin: 0;
   font-family: 'Fraunces';
   font-style: normal;
@@ -1304,138 +1357,126 @@ button:hover {
   color: #333D4B;
 }
 
-.drink__item-span {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 24px;
+.plan__item--active {
+  opacity: 1;
 }
 
-.drink__item-span-span {
-  background-color: #83888F;
-  mix-blend-mode: normal;
-  opacity: 0.25;
-  display: inline-block;
-  height: 1px;
-  width: 255px;
+.plan__right {
+  max-width: 730px;
+  width: 100%;
 }
 
-.drink__right-list {
+.plan__r-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.drink__right-item {
+.plan__r-item {
   margin: 0;
   padding: 0;
   margin-bottom: 88px;
 }
 
-.drink__right-item-item-wrapper {
+.plan__r-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 56px;
 }
 
-.drink__right-item-item-heading {
-  margin: 0;
+.plan__r-heading {
   font-family: 'Fraunces';
   font-style: normal;
+  margin: 0;
   font-weight: 900;
   font-size: 40px;
   line-height: 48px;
   color: #83888F;
-  margin-right: 80px;
-  margin-bottom: 56px;
 }
 
-.drink__right-item-item-img {
-  position: absolute;
-  top: 20%;
-  left: 94%;
+.plan__r-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 
-.drink__right-item-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.plan__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.drink__right-item-item {
-  margin: 0;
-  padding: 0;
-  margin-right: 23px;
-  position: relative;
-}
-
-.drink__right-input {
-  position: absolute;
+.plan__input {
   display: none;
 }
 
-.drink__right-item-item-span1 {
-  display: inline-block;
-  background-color: #F4F1EB;
-  border-radius: 8px;
-  padding: 32px 28px 84px 28px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.plan__input:checked + .plan__input-span {
+  background-color: #0E8784;
+  color: #FEFCF7;
 }
 
-.drink__right-item-item-span1:hover {
+.plan__input:checked + .plan__input-span .plan__span-heading {
+  color: #FFFFFF;
+}
+
+.plan__input-span {
+  padding: 32px 28px 84px 28px;
+  background: #F4F1EB;
+  border-radius: 8px;
+  color: #333D4B;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.plan__input-span:hover {
   background-color: #FDD6BA;
 }
 
-.drink__right-item-item-span1:active {
-  background-color: #0E8784;
-}
-
-.drink__right-item-item-span1-heading {
+.plan__span-heading {
   margin: 0;
   font-family: 'Fraunces';
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 32px;
-  color: #333D4B;
+  display: block;
   margin-bottom: 24px;
+  color: inherit;
+  width: 175px;
 }
 
-.drink__right-item-item-span1-heading:active {
-  color: #FFFFFF;
-}
-
-.drink__right-item-item-span1-text {
+.plan__span-text {
   margin: 0;
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: #333D4B;
-  width: 172px;
+  color: inherit;
 }
 
-.drink__right-item-item-span1-text:active {
-  color: #FEFCF7;
-}
-
-.drink__right-item1 {
+.plan__order {
   background-color: #333D4B;
-  padding: 27px 64px 27px 64px;
+  max-width: 730px;
+  width: 100%;
+  padding: 27px 64px;
   margin-bottom: 40px;
-  width: 730px;
 }
 
-.drink__right-item1-span {
-  color: #0E8784;
-}
-
-.drink__right-item1-text {
+.plan__order-text {
+  margin: 0;
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
@@ -1445,9 +1486,10 @@ button:hover {
   color: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.5;
+  margin-bottom: 8px;
 }
 
-.drink__right-item1-heading {
+.plan__order-heading {
   margin: 0;
   font-family: 'Fraunces';
   font-style: normal;
@@ -1458,8 +1500,12 @@ button:hover {
   width: 602px;
 }
 
-.drink__btn {
-  margin-left: 550px;
+.plan__order-span {
+  color: #0E8784;
+}
+
+.plan__btn {
+  margin-left: 520px;
   margin-bottom: 168px;
 }
 

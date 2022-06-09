@@ -1,4 +1,4 @@
-button {
+.hero__btn {
   background-color: #0E8784;
   border-radius: 6px;
   font-family: 'Fraunces';
@@ -13,7 +13,7 @@ button {
   padding: 16px 31px;
 }
 
-button:hover {
+.hero__btn:hover {
   background-color: #66D2CF;
   border-radius: 6px;
   font-family: 'Fraunces';
