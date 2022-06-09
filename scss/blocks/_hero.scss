@@ -1,0 +1,73 @@
+.hero {
+
+  margin-bottom: 136px;
+
+  &__container {
+    background-image: url(./../images/coffee__made.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 85px;
+  }
+
+  &__left {
+  }
+
+  &__heading {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 72px;
+    color: #FEFCF7;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+    width: 493px;
+  }
+
+  &__text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FEFCF7;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 55px;
+    width: 445px;
+  }
+
+  &__btn {
+    background-color: #0E8784;
+    border-radius: 6px;
+    border: none;
+    overflow: none;
+    padding: 16px 31px;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FEFCF7;
+  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  &__container {
+    background-image: url("./../../images/coffee__made@2x.png");
+  }
+}

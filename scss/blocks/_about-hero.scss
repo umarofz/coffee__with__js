@@ -1,0 +1,52 @@
+.about-hero {
+
+  margin-bottom: 168px;
+
+  &__container {
+    background-image: url(./../images/about__us__bgi.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 137px;
+  padding-bottom: 137px;
+  padding-left: 85px;
+  }
+
+  &__left {
+  }
+
+  &__heading {
+    font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FEFCF7;
+  margin: 0;
+  margin-bottom: 24px;
+  }
+
+  &__text {
+    margin: 0;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FEFCF7;
+  width: 445px;
+  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  &__container {
+    background-image: url("./../../images/about__us__bgi@2x.png");
+  }
+}
