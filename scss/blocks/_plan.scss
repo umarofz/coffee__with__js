@@ -104,6 +104,24 @@
     margin: 0;
     padding: 0;
     margin-bottom: 88px;
+
+    & > .plan__form {
+      display: none;
+    }
+  }
+
+  &__r-item--open {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 88px;
+
+    & > .plan__form {
+      display: flex;
+    }
+
+    & .plan__r-btn {
+      transform: rotate(180deg);
+    }
   }
 
   &__r-top {
@@ -128,6 +146,10 @@
     outline: none;
     background: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &__r-arrow {

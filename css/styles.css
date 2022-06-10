@@ -1378,6 +1378,27 @@ img {
   margin-bottom: 88px;
 }
 
+.plan__r-item > .plan__form {
+  display: none;
+}
+
+.plan__r-item--open {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 88px;
+}
+
+.plan__r-item--open > .plan__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plan__r-item--open .plan__r-btn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .plan__r-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1406,6 +1427,10 @@ img {
   outline: none;
   background: none;
   cursor: pointer;
+}
+
+.plan__r-btn:hover {
+  opacity: 0.6;
 }
 
 .plan__form {
