@@ -697,7 +697,7 @@ img {
   padding: 0;
   list-style: none;
   position: absolute;
-  left: 8%;
+  left: 45px;
   bottom: -151px;
 }
 
@@ -715,6 +715,10 @@ img {
   position: absolute;
   top: 50px;
   left: 140px;
+}
+
+.choose__item:last-child {
+  margin: 0;
 }
 
 .choose__item-heading {
