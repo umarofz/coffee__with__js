@@ -1,6 +1,11 @@
-var item__btn = document.querySelector(".plan__r-btn")
-var form = document.querySelector(".plan__right")
+var elForm = document.querySelector(".plan__right")
 
-form.addEventListener("click", function (evt) {
-  console.log(evt.target);
+elForm.addEventListener("click", function(evt) {
+  var clickedItem = evt.target.classList;
+
+  if (clickedItem == "plan__r-btn" || clickedItem == "plan__r-arrow") {
+    var parentClass = evt.target.parentNode.closest(".plan__r-item")
+
+    parentClass.classList.toggle("plan__r-item--open")
+  }
 })
